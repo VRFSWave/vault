@@ -63,7 +63,6 @@
       width: 100%;
       max-width: 1280px;
       height: 720px;
-      border: none;
       border-radius: 12px;
       box-shadow: 0 0 20px var(--primary-color);
     }
@@ -124,9 +123,14 @@
         mainContent.innerHTML = `
           <iframe
             src="${decodedUrl}"
+            allow="encrypted-media"
+            width="100%"
+            height="720"
+            scrolling="no"
+            frameborder="0"
             allowfullscreen
-            loading="lazy"
             title="Live Stream"
+            loading="lazy"
           ></iframe>
         `;
       }
@@ -134,4 +138,3 @@
   </script>
 </body>
 </html>
-
